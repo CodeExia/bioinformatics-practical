@@ -22,10 +22,9 @@ int patternBio(char string[], char pattern[])
 {
 	int counter = 0;
 	int length = strlen(pattern);
-	int i = 0;
-	for (i = 0; i <= strlen(string) - length; i++)
+	for (int i = 0; i <= strlen(string) - length; i++)
 	{
-		char place[strlen(pattern)+1];
+		char place[length+1];
 		strncpy(place, &string[i], length);
 		place[length] = '\0';
 		if ((0 == strcmp(place, pattern)))
