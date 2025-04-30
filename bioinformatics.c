@@ -13,7 +13,7 @@ int main()
 	printf("Input the pattern you want to count:\n");
 	scanf("%s", inputPattern);
 	
-	printf("%d", patternBio(inputText, inputPattern));
+	printf("The pattern appeard %d times.\n", patternBio(inputText, inputPattern));
 	
 	return 0;
 }
@@ -28,7 +28,10 @@ int patternBio(char string[], char pattern[])
 		strncpy(place, &string[i], length);
 		place[length] = '\0';
 		if ((0 == strcmp(place, pattern)))
+		{
 			counter++;
+			printf("Index %d\n", i);
+		}
 	}
 	return counter;
 }

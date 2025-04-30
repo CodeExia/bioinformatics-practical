@@ -1,2 +1,2 @@
 # bioinformatics-practical
-A repository about bioinformatics tools
+A repository about self-made bioinformatics tools
