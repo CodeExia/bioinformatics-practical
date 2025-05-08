@@ -21,9 +21,12 @@ int main()
 void patternBio(char string[], int kmer)
 {
 	int counter = 0;
+    char duplicate[1500][kmer+1];
+    int dupCounter = 0;
 	int length = strlen(string);
 	for (int i = 0; i <= length - kmer; i++)
 	{
+        int switch = 1;
 		char pattern[kmer+1];
 		strncpy(pattern, &string[i], kmer);
 		pattern[kmer] = '\0';
@@ -37,6 +40,15 @@ void patternBio(char string[], int kmer)
 				counter++;
 		}
 
+
+        strncpy(duplicate[dupCounter], &pattern, kmer);
+        duplicate[dupCounter][kmer] = '\0';
+        dupCounter++;
+        for (int t = 0; t <= length - kmer; t++)
+        {
+            if (duplicate[t] == pattern)
+        }
+        
 		printf("%s appears %d times.\n", pattern, counter);
 		counter = 0;
 	}

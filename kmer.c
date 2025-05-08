@@ -31,7 +31,8 @@ void patternBio(char string[], int kmer)
 		for (int j = 0; j<= length - kmer; j++)
 		{
 			char place[kmer+1];
-			strncpy(place, &string[j], kmer);
+			strncpy(place, &string[j]
+				, kmer);
 			place[kmer] = '\0';
 			if ((0 == strcmp(pattern, place)))
 				counter++;
